@@ -33,12 +33,12 @@ const Navbar = () => {
       </button>
       {/* Mobile Menu*/}
       {/* Overlay Background */}
-      {nav && <div className='bg-black/75 fixed top-0 left-0 w-full h-screen ' onClick={handleClickMenu}></div>}
+      {nav && <div className='bg-black/75 fixed top-0 left-0 w-full h-screen z-10' onClick={handleClickMenu}></div>}
 
-      <div className={nav ? 'fixed w-[300px] h-screen bg-white top-0 left-0 duration-300'
-        : 'fixed w-[300px] h-screen bg-white top-[0] left-[-100%] duration-300'
+      <div className={nav ? 'fixed w-[300px] h-screen bg-white top-0 left-0 duration-300 z-10'
+        : 'fixed w-[300px] h-screen bg-white top-[0] left-[-100%] duration-300 z-10'
       }>
-        <div className='flex justify-between items-center'>
+        <div className='flex justify-between items-center '>
           <h2 className='p-4 text-2xl'>Best <span className='font-bold'>Eats</span></h2>
           <AiOutlineClose size={25} className='mr-3 cursor-pointer' onClick={handleClickMenu} />
         </div>
